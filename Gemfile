@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -23,6 +24,11 @@ end
 
 group :production do
   gem 'pg', '0.18.4'
+end
+
+group :test do
+  gem 'simplecov', require: false
+  gem 'codeclimate-test-reporter'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
